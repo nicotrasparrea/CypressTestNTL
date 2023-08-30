@@ -6,8 +6,7 @@ const createEsbuildPlugin = require("@badeball/cypress-cucumber-preprocessor/esb
 module.exports = defineConfig({
   e2e: {
     setupNodeEvents(on, config) {
-      on(
-        "file:preprocessor",
+      on("file:preprocessor",
         createBundler({
           plugins: [createEsbuildPlugin.default(config)],
         })
@@ -24,12 +23,12 @@ module.exports = defineConfig({
     reporter: 'cypress-mochawesome-reporter',
     reporterOptions: {
       charts: true,
-      reportPageTitle: 'custom-title',
+      reportPageTitle: 'cypress report test',
       embeddedScreenshots: true,
       inlineAssets: true,
       saveAllAttempts: false,
     },
-    projectId: "qrq1nw"
+    projectId: "vs37wz"
 
   },
 });
