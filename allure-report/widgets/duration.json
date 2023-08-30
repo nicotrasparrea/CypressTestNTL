@@ -1,0 +1,1 @@
+[{"uid":"63a28d21e0e3f384","name":"Add todo","time":{"start":1693397098774,"stop":1693397099963,"duration":1189},"status":"passed","severity":"normal"},{"uid":"57224dc7f2ab93aa","name":"Check first todo","time":{"start":1693397104375,"stop":1693397105271,"duration":896},"status":"failed","severity":"normal"}]

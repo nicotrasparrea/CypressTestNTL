@@ -1,0 +1,1 @@
+{"total":2,"items":[{"uid":"35e6e88dde29cff23fd243db9e8c69dd","name":"Check todos and verifying them to be checked","statistic":{"failed":1,"broken":0,"skipped":0,"passed":0,"unknown":0,"total":1}},{"uid":"d03d5fa51eea0ad01f0d37857944ddc2","name":"Add todo and verifying it to be added","statistic":{"failed":0,"broken":0,"skipped":0,"passed":1,"unknown":0,"total":1}}]}
