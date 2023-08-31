@@ -26,7 +26,7 @@ pipeline{
             steps{
                 bat "npm i"
                 // bat "npx cypress run --browser ${BROWSER} --spec ${SPEC} --env allure=true,allureReuseAfterSpec=true"
-                bat "npx cypress run --browser ${BROWSER} --env allure=true, allureReuseAfterSpec=true"
+                bat "npx cypress run --browser ${BROWSER} --env allure=true,allureReuseAfterSpec=true,allureAddVideoOnPass=true"
             }
         }
         stage('Deploying'){
