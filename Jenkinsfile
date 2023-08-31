@@ -9,9 +9,9 @@ pipeline{
 
 // org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
 // WorkflowScript: 11: Invalid option type "ansiColor"
-    ansiColor('xterm') {
-       sh "command"
-     }
+    options{ 
+        ansiColor('xterm')
+    }
 
     stages{
         stage('Bulding'){
