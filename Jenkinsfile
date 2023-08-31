@@ -34,8 +34,9 @@ pipeline{
     }
 
     post {
-        always 
+        always {
             bat "npm run allure:report"
             publisHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'allure-report', reportFiles: 'index.html', reportName: 'HTML report', reportTitles: ''])
         }
+    }
 }
