@@ -7,9 +7,11 @@ pipeline{
         choice(name: 'BROWSER', choices: ['chrome', 'edge', 'firefox'], description: "Choose the browser in which you want to run the tests")
     }
 
-    options{
-        ansiColor('xterm')
-    }
+// org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
+// WorkflowScript: 11: Invalid option type "ansiColor"
+    // options{ 
+    //     ansiColor('xterm')
+    // }
 
     stages{
         stage('Bulding'){
