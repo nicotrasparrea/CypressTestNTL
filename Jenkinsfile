@@ -17,7 +17,7 @@ pipeline{
         stage('Bulding'){
             steps{
                 echo "Building the application"
-                bat "java -Dfile.encoding=UTF-8 -jar jenkins.war --httpPort=8086"
+                
                 echo "Deleting previous reports"
                 bat "npm run allure:clear"
             }
