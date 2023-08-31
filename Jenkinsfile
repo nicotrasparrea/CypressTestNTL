@@ -3,7 +3,7 @@ pipeline{
     agent any
 
     parameters{
-        string(name: 'SPEC', defaultValue: "cypress/integration/**/**", description: "Enter the script path you want to execute")
+        // string(name: 'SPEC', defaultValue: "/**", description: "Enter the script path you want to execute")
         choice(name: 'BROWSER', choices: ['chrome', 'edge', 'firefox'], description: "Choose the browser in which you want to run the tests")
     }
 
@@ -25,7 +25,8 @@ pipeline{
         stage('Testing'){
             steps{
                 bat "npm i"
-                bat "npx cypress run --browser ${BROWSER} --spec ${SPEC} --env allure=true,allureReuseAfterSpec=true"
+                // bat "npx cypress run --browser ${BROWSER} --spec ${SPEC} --env allure=true,allureReuseAfterSpec=true"
+                                bat "npx cypress run --browser ${BROWSER} --env allure=true,allureReuseAfterSpec=true"
             }
         }
         stage('Deploying'){
