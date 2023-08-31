@@ -4,7 +4,7 @@ pipeline{
 
     parameters{
         string(name: 'SPEC', defaultValue: "cypress/integration/**/**", description: "Enter the script path you want to execute")
-        choice(name: 'BROWSER', choices: ['chrome', 'edge', 'firefox'], defaultValue: "chrome", description: "Choose the browser in which you want to run the tests")
+        choice(name: 'BROWSER', choices: ['chrome', 'edge', 'firefox'], description: "Choose the browser in which you want to run the tests")
     }
 
 // org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
