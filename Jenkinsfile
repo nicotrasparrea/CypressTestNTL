@@ -13,10 +13,12 @@ pipeline{
 
     stages{
         stage('Bulding'){
-            echo "Building the application"
+            steps{
+                echo "Building the application"
 
-            echo "Deleting previous reports"
-            bat "npm run allure:clear"
+                echo "Deleting previous reports"
+                bat "npm run allure:clear"
+            }
         }
         stage('Testing'){
             steps{
@@ -25,11 +27,13 @@ pipeline{
             }
         }
         stage('Deploying'){
-            echo "Deploying the application"
+            steps{
+                echo "Deploying the application"
+            }
         }
     }
 
- post {
+    post {
         always 
             bat "npm run allure:report"
             publisHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'allure-report', reportFiles: 'index.html', reportName: 'HTML report', reportTitles: ''])
